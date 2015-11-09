@@ -5,22 +5,17 @@
   "authors": [
     "Ted Whitehead <ted.whitehead@threespot.com>"
   ],
-  "description": "Threespot's base Sass framework",
-  "main": "dist/_frontline.scss",
+  "description": "Threespot's base CSS reset",
+  "main": "css/frontline-css-reset.min.css",
   "license": "MIT",
   "keywords": [
     "sass",
     "scss",
     "css",
-    "mixin",
-    "responsive",
+    "reset",
     "threespot"
   ],
   "ignore": [
-    "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
   ]
 }
