@@ -1,0 +1,44 @@
+{
+  "title": "frontline-css-reset",
+  "name": "frontline-css-reset",
+  "version": "1.0.0",
+  "description": "Threespot's base Sass framework",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Threespot/frontline-css-reset.git"
+  },
+  "main": "dist/_frontline.scss",
+  "author": "Ted Whitehead <ted.whitehead@threespot.com>",
+  "bugs": {
+    "url": "https://github.com/Threespot/frontline-css-reset/issues"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "css",
+    "mixin",
+    "responsive",
+    "threespot"
+  ],
+  "homepage": "https://github.com/Threespot/frontline-css-reset",
+  "scripts": {
+    "gulp": "gulp",
+    "build": "gulp sass",
+    "lint": "gulp lint"
+  },
+  "license": "MIT",
+  "pre-commit": [
+    "test"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-pixrem": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-sass-lint": "^1.0.1",
+    "pre-commit": "^1.1.2"
+  }
+}
