@@ -18,15 +18,21 @@
   vertical-align: baseline;
 }
 
+// Set "box-sizing: border-box" globally
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 //------------------------------------------------------------------------
 // HTML5 elements
 //------------------------------------------------------------------------
 // Correct `block` display not defined for any HTML5 element in IE 8/9,
-// Cfor `details` or `summary` in IE 10/11 and Firefox, and for `main` in IE 11.
+// for `details` or `summary` in IE 10/11 and Firefox, and for `main` in IE 11.
 article,
 aside,
 details,
