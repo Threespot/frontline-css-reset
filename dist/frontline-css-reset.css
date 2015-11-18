@@ -150,11 +150,6 @@ a[href^=tel] {
   text-decoration: none;
 }
 
-[data-whatinput='mouse'] a:focus,
-[data-whatinput='touch'] a:focus {
-  outline: none;
-}
-
 a > svg,
 button > svg {
   pointer-events: none;

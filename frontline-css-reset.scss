@@ -201,15 +201,6 @@ a {
   }
 }
 
-// Remove :focus style via What Input using progressive enhancement
-// so :focus isn't left broken if JavaScript fails
-[data-whatinput='mouse'],
-[data-whatinput='touch'] {
-  a:focus {
-    outline: none;
-  }
-}
-
 // Ensure SVGs don't steal click event
 // https://css-tricks.com/links-inline-svg-staying-target-events/
 a,
