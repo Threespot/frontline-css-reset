@@ -311,10 +311,8 @@ input {
   }// end number
 
   // 1. Address `appearance` set to `searchfield` in Safari and Chrome
-  // 2. Address `box-sizing` set to `border-box` in Safari and Chrome
   &[type='search'] {
     -webkit-appearance: none; // 1 Chrome 45+, Safari 9+
-    box-sizing: content-box; // 2
 
     // Remove inner padding and search cancel button in Safari and Chrome on OS X.
     // Safari (but not Chrome) clips the cancel button when the search input has
