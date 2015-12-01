@@ -181,6 +181,12 @@ input[type='submit'] {
   cursor: pointer;
 }
 
+label,
+input[type='radio'],
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
 button[disabled],
 html input[disabled],
 [aria-disabled] {

@@ -256,6 +256,12 @@ input[type='submit'] {
   cursor: pointer; // 3
 }
 
+label,
+input[type='radio'],
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
 // Re-set default cursor for disabled elements.
 button[disabled],
 html input[disabled],
