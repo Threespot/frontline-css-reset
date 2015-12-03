@@ -280,7 +280,6 @@ input::-moz-focus-inner {
 // 1. Address Firefox 4+ setting `line-height` on `input` using `!important` in
 // the UA stylesheet.
 input {
-  -webkit-appearance: none;// remove webkit styling
   -webkit-border-radius: 0; // iOS 8+
   line-height: normal;// 1
 
@@ -293,6 +292,17 @@ input {
   &[type='radio'] {
     box-sizing: border-box; // 1
     padding: 0; // 2
+  }
+
+  // Remove webkit styling from text inputs
+  &[type='email'],
+  &[type='number'],
+  &[type='password'],
+  &[type='search'],
+  &[type='tel'],
+  &[type='text'],
+  &[type='url'] {
+    -webkit-appearance: none;
   }
 
   // Fix the cursor style for Chrome's increment/decrement buttons. For certain
