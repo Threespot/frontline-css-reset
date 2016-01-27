@@ -370,13 +370,3 @@ optgroup {
 [readonly] {
   cursor: text;
 }
-
-// Prevent zoom on iOS (requires adding 'ios' class to <html>)
-// http://www.456bereastreet.com/archive/201212/ios_webkit_browsers_and_auto-zooming_form_controls/
-.ios {
-  input,
-  textarea,
-  select {
-    font-size: 16px !important;
-  }
-}

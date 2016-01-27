@@ -250,9 +250,3 @@ optgroup {
 [readonly] {
   cursor: text;
 }
-
-.ios input,
-.ios textarea,
-.ios select {
-  font-size: 16px !important;
-}
