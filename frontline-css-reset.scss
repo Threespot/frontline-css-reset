@@ -114,13 +114,14 @@ table {
   border-spacing: 0;
 }
 
-// Ensure 3rd-party iframe embeds do not overlap sticky headers, nav dropdowns, modals, or other similar elements
+// 1. Ensure 3rd-party iframe embeds do not overlap sticky headers, nav dropdowns, modals, or other similar elements
 iframe,
 object,
 embed {
   display: block;
+  max-width: 100%;
   position: relative;
-  z-index: 1 !important;
+  z-index: 1 !important;// [1]
 }
 
 b,
