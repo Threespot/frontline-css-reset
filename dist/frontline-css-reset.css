@@ -1,5 +1,4 @@
 * {
-  border: 0;
   font-size: inherit;
   line-height: inherit;
   margin: 0;
@@ -17,6 +16,10 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 article,
@@ -56,24 +59,22 @@ template {
   display: none;
 }
 
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 img {
+  border: 0;
   height: auto;
   max-width: 100%;
-}
-
-.lte-ie8 img {
-  width: auto;
 }
 
 ol,
@@ -97,7 +98,12 @@ embed {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
 }
 
 small {
@@ -122,11 +128,41 @@ pre {
   overflow: auto;
 }
 
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+blockquote[type=cite] {
+  border: 0;
+}
+
+acronym[title],
+abbr[title] {
+  border-bottom: 0;
+  cursor: help;
+  text-decoration: underline;
+  text-decoration: dotted underline;
+}
+
+mark {
+  background-color: #ff0;
+  color: inherit;
+}
+
+ins {
+  text-decoration: none;
+}
+
 hr {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
+  overflow: visible;
 }
 
 svg:not(:root) {
@@ -161,17 +197,38 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit;
   font: inherit;
+}
+
+button,
+select {
+  text-transform: none;
 }
 
 button {
   overflow: visible;
 }
 
-button,
-select {
-  text-transform: none;
+select::-ms-value {
+  color: currentColor;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  border: 0;
+}
+
+textarea {
+  display: block;
+  overflow: auto;
+  width: 100%;
 }
 
 button,
@@ -188,8 +245,11 @@ input[type='checkbox'] {
   cursor: pointer;
 }
 
-button[disabled],
-html input[disabled],
+[readonly] {
+  cursor: text;
+}
+
+[disabled],
 [aria-disabled] {
   cursor: default;
   cursor: not-allowed;
@@ -197,24 +257,12 @@ html input[disabled],
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
   padding: 0;
 }
 
 input {
   -webkit-border-radius: 0;
   line-height: normal;
-}
-
-input[type='checkbox'], input[type='radio'] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-input[type='email'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'] {
-  -webkit-appearance: none;
 }
 
 input[type='number'] {
@@ -226,28 +274,9 @@ input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-o
 }
 
 input[type='search'] {
-  -webkit-appearance: none;
+  -webkit-appearance: textfield;
 }
 
 input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration, input[type='search']::-webkit-search-results-button, input[type='search']::-webkit-search-results-decoration {
   -webkit-appearance: none;
-}
-
-legend {
-  border: 0;
-  padding: 0;
-}
-
-textarea {
-  display: block;
-  overflow: auto;
-  width: 100%;
-}
-
-optgroup {
-  font-weight: bold;
-}
-
-[readonly] {
-  cursor: text;
 }
