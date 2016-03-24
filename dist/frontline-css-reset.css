@@ -283,6 +283,16 @@ input:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
+[type='email'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='url'] {
+  -webkit-appearance: none;
+}
+
 [type='checkbox'],
 [type='radio'] {
   -webkit-box-sizing: border-box;
@@ -293,10 +303,6 @@ input:-moz-focusring {
 
 [type='number']::-webkit-inner-spin-button, [type='number']::-webkit-outer-spin-button {
   height: auto;
-}
-
-[type='search'] {
-  -webkit-appearance: textfield;
 }
 
 [type='search']::-webkit-search-cancel-button, [type='search']::-webkit-search-decoration {

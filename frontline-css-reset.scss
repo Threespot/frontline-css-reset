@@ -375,6 +375,18 @@ input:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
+// Remove webkit styling from text inputs
+// https://css-tricks.com/almanac/properties/a/appearance/
+[type='email'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='url'] {
+  -webkit-appearance: none;
+}
+
 // 1. Add the correct box sizing in IE 10-.
 // 2. Remove the padding in IE 10-.
 [type='checkbox'],
@@ -391,19 +403,11 @@ input:-moz-focusring {
   }
 }// end number
 
-// 1. Address `appearance` set to `searchfield` in Safari and Chrome, which prevents styling
-// https://css-tricks.com/almanac/properties/a/appearance/
 [type='search'] {
-  -webkit-appearance: textfield; // [1] Chrome 45+, Safari 9+
-
-  // Remove inner padding and search cancel button in Safari and Chrome on OS X.
-  // Safari (but not Chrome) clips the cancel button when the search input has
-  // padding (and `textfield` appearance).
-
+  // Remove the inner padding and cancel buttons in Chrome on OS X and Safari on OS X.
   // Additional resets from http://priyanksharma.com/code-snippets/resetting-html5-search-input-in-webkit/
   // &::-webkit-search-results-button,
   // &::-webkit-search-results-decoration,
-
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
     -webkit-appearance: none;
