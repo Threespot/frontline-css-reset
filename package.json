@@ -1,13 +1,13 @@
 {
   "title": "frontline-css-reset",
   "name": "frontline-css-reset",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Threespot's base CSS reset",
   "repository": {
     "type": "git",
     "url": "https://github.com/Threespot/frontline-css-reset.git"
   },
-  "main": "css/frontline-css-reset.min.css",
+  "main": "dist/frontline-css-reset.min.css",
   "author": "Ted Whitehead <ted.whitehead@threespot.com>",
   "bugs": {
     "url": "https://github.com/Threespot/frontline-css-reset/issues"
@@ -27,13 +27,13 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-minify-css": "^1.2.1",
+    "gulp-minify-css": "^1.2.4",
     "gulp-notify": "^2.2.0",
     "gulp-pixrem": "^1.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.0",
-    "gulp-sass-lint": "^1.0.1"
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-lint": "^1.1.1"
   }
 }
