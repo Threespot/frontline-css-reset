@@ -405,12 +405,15 @@ input:-moz-focusring {
 }// end number
 
 [type='search'] {
+  // Remove rounded corners in webkit
+  border-radius: 0;
+
   // Remove the inner padding and cancel buttons in Chrome on OS X and Safari on OS X.
   // Additional resets from http://priyanksharma.com/code-snippets/resetting-html5-search-input-in-webkit/
-  // &::-webkit-search-results-button,
-  // &::-webkit-search-results-decoration,
   &::-webkit-search-cancel-button,
-  &::-webkit-search-decoration {
+  &::-webkit-search-decoration,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
     -webkit-appearance: none;
   }
 }// end search
