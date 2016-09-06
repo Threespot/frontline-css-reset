@@ -95,6 +95,10 @@ template, // [1]
 // Element styles
 //------------------------------------------------------------------------
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 // Disable double-tap-to-zoom on certain elements to remove the 300ms delay in IE
 // https://github.com/ftlabs/fastclick#when-it-isnt-needed
 // https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
