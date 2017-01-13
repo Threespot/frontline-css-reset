@@ -27,7 +27,8 @@
   "scripts": {
     "gulp": "gulp",
     "build": "gulp sass",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "postversion": "git push && git push --tags"
   },
   "license": "MIT",
   "devDependencies": {
