@@ -30,8 +30,7 @@
 // 1. Set 'box-sizing: border-box' globally
 //    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 //
-// 2. Prevent iOS and IE text size adjust after device orientation change,
-//    without disabling user zoom.
+// 2. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS
 html {
   box-sizing: border-box;// [1]
   -ms-overflow-style: -ms-autohiding-scrollbar;// Edge 12+, Internet Explorer 11-
@@ -43,25 +42,27 @@ html {
 //------------------------------------------------------------------------
 // HTML5 elements
 //------------------------------------------------------------------------
-// Add the correct display in IE 9-.
-// 1. Add the correct display in Edge, IE, and Firefox.
-// 2. Add the correct display in IE.
+// Add the correct display
 article,
 aside,
-details, // [1]
+details, // Edge, IE, and Firefox
 figcaption,
 figure,
 footer,
 header,
-main, // [2]
+main, // IE
 menu,
 nav,
 section,
-summary { // [1]
+summary { // Edge, IE, and Firefox
   display: block;
 }
 
-// Add the correct display in IE 9-.
+summary {
+  display: list-item;
+}
+
+// Add the correct display in IE 9-
 audio,
 canvas,
 progress,
@@ -69,20 +70,18 @@ video {
   display: inline-block;
 }
 
-// Add the correct display in iOS 4-7.
+// Add the correct display in iOS 4-7
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-// Add the correct vertical alignment in Chrome, Firefox, and Opera.
+// Add the correct vertical alignment in Chrome, Firefox, and Opera
 progress {
   vertical-align: baseline;
 }
 
-// Add the correct display in IE 10-.
-// 1. Add the correct display in IE.
-template, // [1]
+template, // IE 10-
 [hidden] {
   display: none;
 }
@@ -108,6 +107,7 @@ button,
 input,
 label,
 select,
+summary,
 textarea,
 [tabindex] {
   -ms-touch-action: manipulation;// IE 10
@@ -117,7 +117,7 @@ textarea,
 // Fluid images
 // http://www.456bereastreet.com/archive/201306/how_to_proportionally_scale_images_that_have_dimension_attributes/
 img {
-  border: 0;// Remove border when inside `a` element in IE 8/9/10.
+  border: 0;// Remove border when inside <a> element in IE 8/9/10
   height: auto;
   max-width: 100%;
 }
@@ -143,24 +143,24 @@ embed {
   z-index: 1;// [1]
 }
 
-// Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+// Prevent the duplicate application of “bolder” by the next rule in Safari 6
 b,
 strong {
   font-weight: inherit;
 }
 
-// Add the correct font weight in Chrome, Edge, and Safari.
+// Add the correct font weight in Chrome, Edge, and Safari
 b,
 strong {
   font-weight: bolder;
 }
 
-// Add the correct font size in all browsers.
+// Add the correct font size in all browsers
 small {
   font-size: 80%;
 }
 
-// Prevent `sub` and `sup` from affecting the line height in all browsers.
+// Prevent <sub> and <sup> from affecting the line height in all browsers
 sub,
 sup {
   line-height: 0;
@@ -175,9 +175,9 @@ sup {
   top: -0.5em;
 }
 
-// Contain overflow in all browsers.
+// Contain overflow in IE 11-
 pre {
-  overflow: auto;// Internet Explorer 11-
+  overflow: auto;
 }
 
 // 1. Correct inheritance and scaling of font-size for preformatted text.
@@ -195,8 +195,8 @@ blockquote[type=cite] {
   border: 0;
 }
 
-// 1. Remove the bottom border in Firefox 39-.
-// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// 1. Remove the bottom border in Firefox 39-
+// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari
 abbr[title] {
   border-bottom: 0;// [1]
   cursor: help;
@@ -204,7 +204,7 @@ abbr[title] {
   text-decoration: underline dotted;// [2]
 }
 
-// Address styling not present in IE 8/9.
+// Address styling not present in IE 8/9
 mark {
   background-color: #ff0;
   color: inherit;
@@ -234,21 +234,15 @@ svg:not(:root) {
 //------------------------------------------------------------------------
 // Links
 //------------------------------------------------------------------------
-// Remove the gray background color from active links in IE 10.
+// Remove the gray background color from active links in IE 10
 a {
   background-color: transparent;
-
-  // Improve readability of focused elements when they are also in an active/hover state.
-  &:active,
-  &:hover {
-    outline: 0;
-  }
 
   // Prevent long mailto links from breaking layouts
   // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
   &[href^='mailto'] {
     word-break: break-all;
-    word-break: break-word;// Non standard for webkit
+    word-break: break-word;// Non-standard value for WebKit
   }
 
   // Override iOS phone number link styling
@@ -271,7 +265,7 @@ button {
 // Form styles
 //------------------------------------------------------------------------
 
-// Change font properties to `inherit` in all browsers.
+// Change font properties to “inherit” in all browsers
 button,
 input,
 select,
@@ -279,24 +273,21 @@ textarea {
   font: inherit;
 }
 
-// Restore the font weight unset by the previous rule.
+// Restore the font weight unset by the previous rule
 optgroup {
   font-weight: bold;
 }
 
-// Remove the inheritance of text transform in Edge, Firefox, and IE.
-// 1. Remove the inheritance of text transform in Firefox.
-button,
-select {// [1]
+// Remove the inheritance of text transform
+button, // Edge, Firefox, and IE
+select { // Firefox
   text-transform: none;
 }
 
-// Show the overflow in IE.
-// 1. Show the overflow in Edge.
-// 2. Show the overflow in Edge, Firefox, and IE.
-button,
-input, // [1]
-select {// [2]
+// Show the overflow
+button, // IE
+input, // Edge
+select { // Edge, Firefox, and IE
   overflow: visible;
 }
 
@@ -305,8 +296,8 @@ select::-ms-value {
   color: currentColor;
 }
 
-// Don't inherit `font-weight`
-// NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+// Don't inherit “font-weight”
+// NOTE: The default can’t be changed in Chrome and Safari on OS X
 optgroup {
   font-weight: bold;
 }
@@ -315,29 +306,28 @@ fieldset {
   border: 0;
 }
 
-// 1. Correct the text wrapping in Edge and IE.
-// 2. Correct the color inheritance from `fieldset` elements in IE.
-// 3. Remove the padding so developers are not caught out when they zero out
-//    `fieldset` elements in all browsers.
+// 1. Correct the text wrapping in Edge and IE
+// 2. Correct the color inheritance from <fieldset> elements in IE
 legend {
   border: 0;
   box-sizing: border-box;// [1]
   color: inherit;// [2]
   display: table;// [1]
   max-width: 100%;// [1]
-  padding: 0;// [3]
+  padding: 0;
   white-space: normal;// [1]
 }
 
-// 1. Remove the default vertical scrollbar in IE.
+// 1. Remove the default vertical scrollbar in IE
 textarea {
+  border-radius: 0;// iOS
   display: block;
-  overflow: auto;// 1
+  overflow: auto;// [1]
   width: 100%;
 }
 
-// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video` controls in Android 4.
-// 2. Correct the inability to style clickable types in iOS.
+// 1. Prevent a WebKit bug where (2) destroys native <audio> and <video> controls in Android 4
+// 2. Correct the inability to style clickable types in iOS
 button,
 html input[type='button'], // 1
 input[type='reset'],
@@ -376,11 +366,13 @@ input::-moz-focus-inner {
 
 // Restore the focus styles unset by the previous rule.
 button:-moz-focusring,
-input:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
-// Remove webkit styling from text inputs
+// Remove WebKit styling from text inputs
 // https://css-tricks.com/almanac/properties/a/appearance/
 [type='email'],
 [type='number'],
@@ -389,11 +381,12 @@ input:-moz-focusring {
 [type='tel'],
 [type='text'],
 [type='url'] {
+  border-radius: 0;// iOS
   -webkit-appearance: none;
 }
 
-// 1. Add the correct box sizing in IE 10-.
-// 2. Remove the padding in IE 10-.
+// 1. Add the correct box sizing in IE 10-
+// 2. Remove the padding in IE 10-
 [type='checkbox'],
 [type='radio'] {
   box-sizing: border-box;// [1]
@@ -409,10 +402,9 @@ input:-moz-focusring {
 }// end number
 
 [type='search'] {
-  // Remove rounded corners in webkit
-  border-radius: 0;
+  border-radius: 0;// WebKit, iOS
 
-  // Remove the inner padding and cancel buttons in Chrome on OS X and Safari on OS X.
+  // Remove the inner padding and cancel buttons in Chrome on OS X and Safari on OS X
   // Additional resets from http://priyanksharma.com/code-snippets/resetting-html5-search-input-in-webkit/
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration,

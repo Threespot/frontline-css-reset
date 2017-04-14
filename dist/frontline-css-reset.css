@@ -37,6 +37,10 @@ summary {
   display: block;
 }
 
+summary {
+  display: list-item;
+}
+
 audio,
 canvas,
 progress,
@@ -72,6 +76,7 @@ button,
 input,
 label,
 select,
+summary,
 textarea,
 [tabindex] {
   -ms-touch-action: manipulation;
@@ -179,10 +184,6 @@ a {
   background-color: transparent;
 }
 
-a:active, a:hover {
-  outline: 0;
-}
-
 a[href^='mailto'] {
   word-break: break-all;
   word-break: break-word;
@@ -245,6 +246,8 @@ legend {
 }
 
 textarea {
+  -webkit-border-radius: 0;
+  border-radius: 0;
   display: block;
   overflow: auto;
   width: 100%;
@@ -284,7 +287,9 @@ input::-moz-focus-inner {
 }
 
 button:-moz-focusring,
-input:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -295,6 +300,8 @@ input:-moz-focusring {
 [type='tel'],
 [type='text'],
 [type='url'] {
+  -webkit-border-radius: 0;
+  border-radius: 0;
   -webkit-appearance: none;
 }
 
