@@ -4,8 +4,8 @@
   "version": "2.4.0",
   "description": "Threespot's base CSS reset",
   "engines": {
-    "node": ">=4.0.0",
-    "npm": ">=3.0.0"
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
   },
   "repository": {
     "type": "git",
@@ -32,13 +32,13 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-notify": "^2.2.0",
-    "gulp-pixrem": "^1.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-sass-lint": "^1.2.0"
+    "gulp": "3.x",
+    "gulp-autoprefixer": "4.x",
+    "gulp-minify-css": "1.x",
+    "gulp-notify": "3.x",
+    "gulp-pixrem": "1.x",
+    "gulp-rename": "1.x",
+    "gulp-sass": "3.x",
+    "gulp-sass-lint": "1.x"
   }
 }
