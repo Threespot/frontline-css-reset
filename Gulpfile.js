@@ -36,15 +36,10 @@ gulp.task('sass', function() {
     .on('error', handleErrors)
     .pipe( autoprefixer({
       browsers: [
-        'ie >= 8',
-        'ie_mob >= 10',
-        'ff >= 25',
-        'chrome >= 32',
-        'safari >= 7',
-        'opera >= 19',
-        'ios >= 6',
-        'android >= 2',
-        'bb >= 10'
+        'last 2 versions',
+        'Android >= 4.4',
+        'Explorer >= 9',
+        'iOS >= 8'
       ],
       cascade: false
     }))
