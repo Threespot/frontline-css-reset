@@ -8,13 +8,11 @@
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 html {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-y: scroll;
@@ -157,6 +155,7 @@ abbr[title] {
   border-bottom: 0;
   cursor: help;
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
 }
 
@@ -171,7 +170,6 @@ ins {
 
 hr {
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   overflow: visible;
@@ -237,7 +235,6 @@ fieldset {
 legend {
   border: 0;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -247,7 +244,6 @@ legend {
 }
 
 textarea {
-  -webkit-border-radius: 0;
   border-radius: 0;
   display: block;
   overflow: auto;
@@ -301,7 +297,6 @@ button:-moz-focusring,
 [type='tel'],
 [type='text'],
 [type='url'] {
-  -webkit-border-radius: 0;
   border-radius: 0;
   -webkit-appearance: none;
 }
@@ -309,7 +304,6 @@ button:-moz-focusring,
 [type='checkbox'],
 [type='radio'] {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -319,7 +313,6 @@ button:-moz-focusring,
 }
 
 [type='search'] {
-  -webkit-border-radius: 0;
   border-radius: 0;
 }
 
