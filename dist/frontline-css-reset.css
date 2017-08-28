@@ -83,7 +83,8 @@ textarea,
   touch-action: manipulation;
 }
 
-img {
+img,
+svg {
   border: 0;
   height: auto;
   max-width: 100%;
