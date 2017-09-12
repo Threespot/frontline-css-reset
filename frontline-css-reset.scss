@@ -114,10 +114,9 @@ textarea,
   touch-action: manipulation;// IE 11+
 }
 
-// Fluid images and SVGs
+// Fluid images
 // http://www.456bereastreet.com/archive/201306/how_to_proportionally_scale_images_that_have_dimension_attributes/
-img,
-svg {
+img {
   border: 0;// Remove border when inside <a> element in IE 8/9/10
   height: auto;
   max-width: 100%;
