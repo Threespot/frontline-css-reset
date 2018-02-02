@@ -1,11 +1,11 @@
 {
   "title": "frontline-css-reset",
   "name": "frontline-css-reset",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Threespot's base CSS reset",
   "engines": {
-    "node": ">=8.0.0",
-    "npm": ">=5.0.0"
+    "node": ">=6.0.0",
+    "npm": ">=3.0.0"
   },
   "repository": {
     "type": "git",
