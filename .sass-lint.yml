@@ -81,7 +81,7 @@ rules:
   property-sort-order: 0
   quotes:
     - 1
-    - style: single
+    - style: double
   shorthand-values: 1
   single-line-per-selector: 0
   space-after-bang:

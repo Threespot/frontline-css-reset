@@ -8,7 +8,7 @@
 // @link http://meiert.com/en/blog/20070922/user-agent-style-sheets/
 // @link http://css-class.com/test/css/defaults/UA-style-sheet-defaults.htm
 //------------------------------------------------------------------------
-@charset 'UTF-8';
+@charset "UTF-8";
 
 //------------------------------------------------------------------------
 // Universal styles
@@ -27,7 +27,7 @@
   box-sizing: inherit;
 }
 
-// 1. Set 'box-sizing: border-box' globally
+// 1. Set "box-sizing: border-box" globally
 //    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 //
 // 2. Prevent adjustments of font size after orientation changes in iOS
@@ -85,7 +85,7 @@ template, // IE 10-
   display: none;
 }
 
-[aria-busy='true'] {
+[aria-busy="true"] {
   cursor: progress;
 }
 
@@ -191,7 +191,7 @@ blockquote[type=cite] {
 // 1. Remove the bottom border in Chrome 57-
 // 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
 abbr[title] {
-  border-bottom: none;// [1]
+  border-bottom: 0;// [1]
   text-decoration: underline;// [2]
   text-decoration: underline dotted;// [2]
 }
@@ -221,7 +221,7 @@ a {
 
   // Prevent long mailto links from breaking layouts
   // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
-  &[href^='mailto'] {
+  &[href^="mailto"] {
     word-break: break-all;
     word-break: break-word;// Non-standard value for WebKit
   }
@@ -233,7 +233,7 @@ a {
   }
 }
 
-// Ensure SVGs don't steal click event
+// Ensure SVGs don’t steal click event
 // https://css-tricks.com/links-inline-svg-staying-target-events/
 a,
 button {
@@ -277,7 +277,7 @@ select::-ms-value {
   color: currentColor;
 }
 
-// Don't inherit “font-weight”
+// Don"t inherit “font-weight”
 // NOTE: The default can’t be changed in Chrome and Safari on OS X
 optgroup {
   font-weight: bold;
@@ -319,11 +319,11 @@ button,
 button,
 label,
 select,
-[type='button'],
-[type='checkbox'],
-[type='radio'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="checkbox"],
+[type="radio"],
+[type="reset"],
+[type="submit"] {
   cursor: pointer;
 }
 
@@ -346,42 +346,42 @@ input::-moz-focus-inner {
 
 // Restore the focus styles unset by the previous rule.
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
 // Remove WebKit styling from text inputs
 // https://css-tricks.com/almanac/properties/a/appearance/
-[type='email'],
-[type='number'],
-[type='password'],
-[type='search'],
-[type='tel'],
-[type='text'],
-[type='url'] {
+[type="email"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="url"] {
   border-radius: 0;// iOS
   -webkit-appearance: none;
 }
 
 // 1. Add the correct box sizing in IE 10-
 // 2. Remove the padding in IE 10-
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;// [1]
   padding: 0;// [2]
 }
 
 // Correct the cursor style of increment and decrement buttons in Chrome.
-[type='number'] {
+[type="number"] {
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     height: auto;
   }
 }// end number
 
-[type='search'] {
+[type="search"] {
   border-radius: 0;// WebKit, iOS
 
   // Remove the inner padding in Chrome and Safari on macOS.
