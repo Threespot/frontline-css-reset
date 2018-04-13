@@ -30,19 +30,18 @@
 // 1. Set 'box-sizing: border-box' globally
 //    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 //
-// 2. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS
+// 2. Prevent adjustments of font size after orientation changes in iOS
 html {
   box-sizing: border-box;// [1]
   -ms-overflow-style: -ms-autohiding-scrollbar;// Edge 12+, Internet Explorer 11-
   overflow-y: scroll;// All browsers without overlaying scrollbars
   -webkit-text-size-adjust: 100%;// [2]
-  -ms-text-size-adjust: 100%;// [2]
 }
 
 //------------------------------------------------------------------------
 // HTML5 elements
 //------------------------------------------------------------------------
-// Add the correct display
+// Add the correct display in IE 9
 article,
 aside,
 details, // Edge, IE, and Firefox
@@ -143,12 +142,6 @@ embed {
   z-index: 1;// [1]
 }
 
-// Prevent the duplicate application of “bolder” by the next rule in Safari 6
-b,
-strong {
-  font-weight: inherit;
-}
-
 // Add the correct font weight in Chrome, Edge, and Safari
 b,
 strong {
@@ -195,19 +188,12 @@ blockquote[type=cite] {
   border: 0;
 }
 
-// 1. Remove the bottom border in Firefox 39-
-// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari
+// 1. Remove the bottom border in Chrome 57-
+// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
 abbr[title] {
-  border-bottom: 0;// [1]
-  cursor: help;
+  border-bottom: none;// [1]
   text-decoration: underline;// [2]
   text-decoration: underline dotted;// [2]
-}
-
-// Address styling not present in IE 8/9
-mark {
-  background-color: #ff0;
-  color: inherit;
 }
 
 // Remove underline so as not to be confused with a link
@@ -224,11 +210,6 @@ hr {
   box-sizing: content-box;// [1]
   height: 0;// [1]
   overflow: visible;// [2]
-}
-
-// Hide the overflow in IE
-svg:not(:root) {
-  overflow: hidden;
 }
 
 //------------------------------------------------------------------------
@@ -318,7 +299,7 @@ legend {
   white-space: normal;// [1]
 }
 
-// 1. Remove the default vertical scrollbar in IE
+// 1. Remove the default vertical scrollbar in IE 10+
 textarea {
   border-radius: 0;// iOS
   display: block;
@@ -326,13 +307,12 @@ textarea {
   width: 100%;
 }
 
-// 1. Prevent a WebKit bug where (2) destroys native <audio> and <video> controls in Android 4
-// 2. Correct the inability to style clickable types in iOS
+// Correct the inability to style clickable types in iOS and Safari.
 button,
-html input[type='button'], // 1
-input[type='reset'],
-input[type='submit'] {
-  -webkit-appearance: button; // 2
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
 }
 
 // Change the cursor in all browsers for better usability
@@ -404,9 +384,8 @@ button:-moz-focusring,
 [type='search'] {
   border-radius: 0;// WebKit, iOS
 
-  // Remove the inner padding and cancel buttons in Chrome on OS X and Safari on OS X
+  // Remove the inner padding in Chrome and Safari on macOS.
   // Additional resets from http://priyanksharma.com/code-snippets/resetting-html5-search-input-in-webkit/
-  &::-webkit-search-cancel-button,
   &::-webkit-search-decoration,
   &::-webkit-search-results-button,
   &::-webkit-search-results-decoration {
