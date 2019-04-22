@@ -247,7 +247,8 @@ select,
 [type="checkbox"],
 [type="radio"],
 [type="reset"],
-[type="submit"] {
+[type="submit"],
+[aria-controls] {
   cursor: pointer;
 }
 
@@ -255,9 +256,12 @@ select,
   cursor: text;
 }
 
-[disabled],
-[aria-disabled] {
-  cursor: default;
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-disabled="true"],
+[disabled] {
   cursor: not-allowed;
 }
 
