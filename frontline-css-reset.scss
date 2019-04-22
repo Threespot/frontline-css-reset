@@ -315,7 +315,7 @@ button,
   -webkit-appearance: button;
 }
 
-// Change the cursor in all browsers for better usability
+// Change the cursor for better usability
 button,
 label,
 select,
@@ -323,7 +323,8 @@ select,
 [type="checkbox"],
 [type="radio"],
 [type="reset"],
-[type="submit"] {
+[type="submit"],
+[aria-controls] {
   cursor: pointer;
 }
 
@@ -331,10 +332,12 @@ select,
   cursor: text;
 }
 
-// Restore the default cursor to disabled elements unset by the previous rule.
-[disabled],
-[aria-disabled] {
-  cursor: default;// fallback
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-disabled="true"],
+[disabled] {
   cursor: not-allowed;
 }
 
