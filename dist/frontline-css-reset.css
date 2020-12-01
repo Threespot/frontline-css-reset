@@ -141,6 +141,13 @@ blockquote[type=cite] {
   border: 0;
 }
 
+address,
+cite,
+dfn,
+var {
+  font-style: normal;
+}
+
 abbr[title] {
   border-bottom: 0;
   text-decoration: underline;

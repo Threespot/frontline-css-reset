@@ -7,6 +7,11 @@
 // @link http://yuilibrary.com/yui/docs/cssreset/
 // @link http://meiert.com/en/blog/20070922/user-agent-style-sheets/
 // @link http://css-class.com/test/css/defaults/UA-style-sheet-defaults.htm
+//
+// User agent stylesheets
+// @link https://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css
+// @link https://dxr.mozilla.org/mozilla-central/source/layout/style/res/html.css
+// @link https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css
 //------------------------------------------------------------------------
 @charset "UTF-8";
 
@@ -186,6 +191,14 @@ samp {
 // Remove cite blockquote border
 blockquote[type=cite] {
   border: 0;
+}
+
+// Don’t italicize these elements by default
+address,
+cite,
+dfn,
+var {
+  font-style: normal;
 }
 
 // 1. Remove the bottom border in Chrome 57-
