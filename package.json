@@ -1,11 +1,10 @@
 {
   "title": "frontline-css-reset",
   "name": "frontline-css-reset",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Threespot's base CSS reset",
   "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=3.0.0"
+    "node": ">=14.0.0"
   },
   "repository": {
     "type": "git",
@@ -24,21 +23,27 @@
     "threespot"
   ],
   "homepage": "https://github.com/Threespot/frontline-css-reset",
+  "browserslist": [
+    "last 2 versions",
+    ">0.5%",
+    "not dead",
+    "not op_mini all"
+  ],
   "scripts": {
-    "gulp": "gulp",
+    "start": "gulp",
     "build": "gulp sass",
     "lint": "gulp lint",
     "postversion": "git push && git push --tags"
   },
   "license": "MIT",
   "devDependencies": {
-    "gulp": "3.x",
-    "gulp-autoprefixer": "4.x",
-    "gulp-minify-css": "1.x",
-    "gulp-notify": "3.x",
-    "gulp-pixrem": "1.x",
-    "gulp-rename": "1.x",
-    "gulp-sass": "3.x",
-    "gulp-sass-lint": "1.x"
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-pixrem": "^1.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-lint": "^1.4.0"
   }
 }

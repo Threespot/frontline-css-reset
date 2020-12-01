@@ -34,15 +34,7 @@ gulp.task('sass', function() {
     // Add rem fallbacks using pixrem
     .pipe( pixrem() )// options https://github.com/robwierzbowski/node-pixrem#options
     .on('error', handleErrors)
-    .pipe( autoprefixer({
-      browsers: [
-        'last 2 versions',
-        'Android >= 4.4',
-        'Explorer >= 9',
-        'iOS >= 8'
-      ],
-      cascade: false
-    }))
+    .pipe( autoprefixer({ cascade: false }) )
     .on('error', handleErrors)
     .pipe( gulp.dest('./dist'))
     // Minify
@@ -76,4 +68,4 @@ gulp.task('lint', function() {
 // -----------------------------------------------------------------------------
 // Default task
 // -----------------------------------------------------------------------------
-gulp.task('default', ['sass', 'lint']);
+gulp.task('default', gulp.series('sass', 'lint'));

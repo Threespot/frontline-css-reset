@@ -7,12 +7,10 @@
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-y: scroll;
@@ -76,7 +74,6 @@ select,
 summary,
 textarea,
 [tabindex] {
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 
@@ -156,7 +153,6 @@ ins {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   overflow: visible;
@@ -217,7 +213,6 @@ fieldset {
 
 legend {
   border: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -290,7 +285,6 @@ button:-moz-focusring,
 
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
