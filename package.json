@@ -1,7 +1,7 @@
 {
   "title": "frontline-css-reset",
   "name": "frontline-css-reset",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Threespot's base CSS reset",
   "repository": {
     "type": "git",
@@ -42,5 +42,6 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sass-lint": "^1.4.0"
-  }
+  },
+  "dependencies": {}
 }
