@@ -3,9 +3,6 @@
   "name": "frontline-css-reset",
   "version": "4.0.0",
   "description": "Threespot's base CSS reset",
-  "engines": {
-    "node": ">=14.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Threespot/frontline-css-reset.git"
