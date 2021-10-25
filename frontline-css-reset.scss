@@ -126,9 +126,11 @@ img {
   max-width: 100%;
 }
 
-ol,
-ul {
-  list-style: none;
+// Use transparent “::marker” instead of setting “list-style: none;”
+// which causes VO in Safari to drop the list semantics.
+// https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
+::marker {
+  color: transparent;
 }
 
 // Remove most spacing between table cells.
