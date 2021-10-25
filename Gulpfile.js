@@ -2,18 +2,18 @@
 // -----------------------------------------------------------------------------
 // Sass
 // -----------------------------------------------------------------------------
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var pixrem = require('gulp-pixrem');
-var rename = require('gulp-rename');
-var minifyCSS = require('gulp-minify-css');
-var notify = require('gulp-notify');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
+const pixrem = require('gulp-pixrem');
+const rename = require('gulp-rename');
+const minifyCSS = require('gulp-minify-css');
+const notify = require('gulp-notify');
 
 //------------------------------------------------------------------------
 // Error handling
 //------------------------------------------------------------------------
-var handleErrors = function(errorObject, callback) {
+const handleErrors = function(errorObject, callback) {
   notify.onError(errorObject.toString().split(': ').join(':\n')).apply(this, arguments);
   // Keep gulp from hanging on this task
   if (typeof this.emit === 'function') {
@@ -56,7 +56,7 @@ gulp.task('sass', function() {
 // -----------------------------------------------------------------------------
 // Lint
 // -----------------------------------------------------------------------------
-var sassLint = require('gulp-sass-lint');
+const sassLint = require('gulp-sass-lint');
 
 gulp.task('lint', function() {
   return gulp.src('*.scss')

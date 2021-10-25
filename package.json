@@ -1,17 +1,18 @@
 {
-  "title": "frontline-css-reset",
   "name": "frontline-css-reset",
-  "version": "4.0.1",
-  "description": "Threespot's base CSS reset",
+  "description": "Threespot’s base CSS reset",
+  "version": "5.0.0",
+  "main": "dist/frontline-css-reset.min.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/Threespot/frontline-css-reset.git"
   },
-  "main": "dist/frontline-css-reset.min.css",
-  "author": "Ted Whitehead <ted.whitehead@threespot.com>",
+  "author": "Threespot <hello@threespot.com> (https://threespot.com)",
+  "homepage": "https://github.com/Threespot/frontline-css-reset",
   "bugs": {
     "url": "https://github.com/Threespot/frontline-css-reset/issues"
   },
+  "license": "MIT",
   "keywords": [
     "sass",
     "scss",
@@ -19,7 +20,6 @@
     "reset",
     "threespot"
   ],
-  "homepage": "https://github.com/Threespot/frontline-css-reset",
   "browserslist": [
     "last 2 versions",
     ">0.5%",
@@ -30,18 +30,25 @@
     "start": "gulp",
     "build": "gulp sass",
     "lint": "gulp lint",
+    "npm-patch": "npm version patch --force -m \"version %s\"",
+    "npm-minor": "npm version minor --force -m \"version %s\"",
+    "npm-major": "npm version major --force -m \"version %s\"",
+    "patch": "read -p 'Confirm create new patch (0.0.x) to npm: (y/n) ' -n 1 -r \n if [[ $REPLY =~ ^[Yy]$ ]] \n then \n yarn npm-patch \n fi",
+    "minor": "read -p 'Confirm create new minor version (0.x.0) to npm (y/n) ' -n 1 -r \n if [[ $REPLY =~ ^[Yy]$ ]] \n then \n yarn npm-minor \n fi",
+    "major": "read -p 'Confirm create new major version (x.0.0) to npm (y/n) ' -n 1 -r \n if [[ $REPLY =~ ^[Yy]$ ]] \n then \n yarn npm-major \n fi",
+    "preversion": "yarn lint",
+    "version": "yarn build && git add .",
     "postversion": "git push && git push --tags"
   },
-  "license": "MIT",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-minify-css": "^1.2.4",
-    "gulp-notify": "^3.2.0",
+    "gulp-notify": "^4.0.0",
     "gulp-pixrem": "^1.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sass-lint": "^1.4.0"
-  },
-  "dependencies": {}
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-lint": "^1.4.0",
+    "sass": "^1.43.3"
+  }
 }
