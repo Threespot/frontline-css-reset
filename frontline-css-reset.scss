@@ -359,9 +359,12 @@ select,
   cursor: not-allowed;
 }
 
-// Remove inner padding in Firefox 4+.
+// Remove the inner border and padding in Firefox 4+.
 button::-moz-focus-inner,
-input::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
   padding: 0;
 }
 
