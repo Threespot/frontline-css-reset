@@ -120,11 +120,12 @@ textarea,
   touch-action: manipulation;// IE 11+
 }
 
-// Fluid images
-// http://www.456bereastreet.com/archive/201306/how_to_proportionally_scale_images_that_have_dimension_attributes/
-img {
-  border: 0;// Remove border when inside <a> element in IE 8/9/10
-  height: auto;
+// Fluid media
+img,
+picture,
+video,
+canvas {
+  display: block;
   max-width: 100%;
 }
 
