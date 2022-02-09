@@ -395,12 +395,10 @@ button:-moz-focusring,
 }
 
 // Correct the cursor style of increment and decrement buttons in Chrome.
-[type="number"] {
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    height: auto;
-  }
-}// end number
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
 
 [type="search"] {
   border-radius: 0;// WebKit, iOS
