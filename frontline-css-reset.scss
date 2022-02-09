@@ -129,11 +129,13 @@ canvas {
   max-width: 100%;
 }
 
-// Use transparent “::marker” instead of setting “list-style: none;”
-// which causes VO in Safari to drop the list semantics.
+// Only remove bullets when role="list" is applied in order
+// to prevent VO in Safari from removing the list semantics.
 // https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
-::marker {
-  color: transparent;
+// https://piccalil.li/blog/a-modern-css-reset/
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
 // Remove most spacing between table cells.
