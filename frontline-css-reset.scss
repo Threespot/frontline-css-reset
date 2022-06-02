@@ -242,13 +242,13 @@ a {
 
   // Prevent long mailto links from breaking layouts
   // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
-  &[href^="mailto"] {
+  &:where([href^="mailto"]) {
     word-break: break-all;
     word-break: break-word;// Non-standard value for WebKit
   }
 
   // Override iOS phone number link styling
-  &[href^="tel"] {
+  &:where([href^="tel"]) {
     color: inherit;
     text-decoration: none;
   }
