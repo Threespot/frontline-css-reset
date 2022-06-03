@@ -21,10 +21,13 @@
     "threespot"
   ],
   "browserslist": [
-    "last 2 versions",
-    ">0.5%",
-    "not dead",
-    "not op_mini all"
+    "> 0.5% in US",
+    "last 1 Android major versions",
+    "last 2 ChromeAndroid major versions",
+    "last 2 Chrome major versions",
+    "last 2 Firefox major versions",
+    "last 2 Safari major versions",
+    "last 2 iOS major versions"
   ],
   "scripts": {
     "start": "gulp",
@@ -41,6 +44,7 @@
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
+    "browserslist": "^4.20.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-minify-css": "^1.2.4",
