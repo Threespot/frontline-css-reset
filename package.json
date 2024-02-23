@@ -1,7 +1,8 @@
 {
   "name": "frontline-css-reset",
-  "description": "Threespot’s base CSS reset",
+  "description": "Threespot’s CSS reset",
   "version": "6.1.0",
+  "type": "module",
   "main": "dist/frontline-css-reset.min.css",
   "repository": {
     "type": "git",
@@ -20,39 +21,18 @@
     "reset",
     "threespot"
   ],
-  "browserslist": [
-    "> 0.5% in US",
-    "last 1 Android major versions",
-    "last 2 ChromeAndroid major versions",
-    "last 2 Chrome major versions",
-    "last 2 Firefox major versions",
-    "last 2 Safari major versions",
-    "last 2 iOS major versions"
-  ],
   "scripts": {
-    "start": "gulp",
-    "build": "gulp sass",
-    "lint": "gulp lint",
+    "build": "csso frontline-css-reset.css --output dist/frontline-css-reset.min.css --comments first-exclamation",
     "npm-patch": "npm version patch --force -m \"version %s\"",
     "npm-minor": "npm version minor --force -m \"version %s\"",
     "npm-major": "npm version major --force -m \"version %s\"",
     "patch": "read -p 'Confirm create new patch (0.0.x) to npm: (y/n) ' -n 1 -r \n if [[ $REPLY =~ ^[Yy]$ ]] \n then \n yarn npm-patch \n fi",
     "minor": "read -p 'Confirm create new minor version (0.x.0) to npm (y/n) ' -n 1 -r \n if [[ $REPLY =~ ^[Yy]$ ]] \n then \n yarn npm-minor \n fi",
     "major": "read -p 'Confirm create new major version (x.0.0) to npm (y/n) ' -n 1 -r \n if [[ $REPLY =~ ^[Yy]$ ]] \n then \n yarn npm-major \n fi",
-    "preversion": "yarn lint",
     "version": "yarn build && git add .",
     "postversion": "git push && git push --tags"
   },
-  "devDependencies": {
-    "browserslist": "^4.20.3",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-notify": "^4.0.0",
-    "gulp-pixrem": "^1.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-sass-lint": "^1.4.0",
-    "sass": "^1.43.3"
+  "dependencies": {
+    "csso-cli": "^4.0.2"
   }
 }
