@@ -68,6 +68,12 @@ html {
   z-index: 1;/* 1 */
 }
 
+/* Set 16:9 aspect ration on video embeds */
+:where(iframe[src*="vimeo.com"], iframe[src*="youtube.com"]) {
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
 /*
   Only remove list bullets when role="list" is applied in order
   to prevent VO in Safari from removing the list semantics.
