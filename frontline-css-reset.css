@@ -134,6 +134,11 @@ html {
   line-height: 0;
 }
 
+/* Remove border on fieldsets */
+:where(fieldset) {
+  border: 0;
+}
+
 /* Inherit font styles for form fields */
 /* Note: You can’t style <select> text in macOS Safari */
 :where(button, input, select, textarea) {
