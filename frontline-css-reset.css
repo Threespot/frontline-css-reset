@@ -84,6 +84,11 @@ html {
   list-style: none;
 }
 
+/* Add default padding back for list with bullets */
+:where(ul:not([role]), ol:not([role])) {
+  padding-inline-start: revert;
+}
+
 /* Reset default table styles */
 :where(table) {
   border-collapse: collapse;
