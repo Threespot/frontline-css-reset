@@ -1,7 +1,11 @@
 /*! Frontline CSS Reset https://github.com/Threespot/frontline-css-reset/ */
 
-/* Reset browser defaults on all elements */
-:where(*) {
+/*
+  Remove default margin and padding, set common properties to “inherit”
+  Note: The universal selector (*) has zero specificity
+*/
+* {
+  box-sizing: inherit;
   font-size: inherit;
   line-height: inherit;
   margin: 0;
@@ -9,16 +13,19 @@
 }
 
 /*
-  Inherit “box-sizing” so devs can override it later if needed
-  https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+  Inherit box-sizing on pseudo elements
+  Note: We’re not using :where() since we want these styles
+        to apply on old browsers to avoid breaking the layout.
 */
-:where(*, *:before, *:after) {
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 /*
   1. Set “box-sizing: border-box;” by default
      http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+     https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
   2. Prevent iOS Safari from increasing the font-size in landscape view
      https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
 */
