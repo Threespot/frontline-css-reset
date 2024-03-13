@@ -1,12 +1,39 @@
 # Frontline CSS Reset
 [![npm version](https://badge.fury.io/js/frontline-css-reset.svg)](https://badge.fury.io/js/frontline-css-reset) ![gzip file size](https://badge-size.herokuapp.com/Threespot/frontline-css-reset/master/dist/frontline-css-reset.min.css?compression=gzip)
 
-TBD
+## Background
 
-- Reset vs. normalize
-- Goal is to provide consistent blank slate, take care of cross-browser issues
-- Opt-in typography
-- Browser support
+All browsers include some basic default styles, like heading sizes, list item bullets, table borders, form field styles, etc. These are known as the user agent styles. If you’d like to see what they look like here’s a [collection](https://meiert.com/en/blog/user-agent-style-sheets/) from the past and present.
+
+When developers began using CSS in the late 1990s and early 2000s they found themselves having to cancel out the user agent styles more often than not, particularly default margins. In an effort to reduce the amount of CSS they had to write on every project, some developers created their own reusable global styles they would include on every project, before their own custom styles. These became known as CSS resets. If you’re interested in the history of CSS reset, check out these resources:
+
+- https://en.wikipedia.org/wiki/Reset_style_sheet
+- https://www.webfx.com/blog/web-design/the-hishistorytory-of-css-resets/
+- https://css-tricks.com/reboot-resets-reasoning/
+- https://css-tricks.com/css-remedy/
+
+CSS resets typically do a combination of the following:
+
+- Remove unwanted default browser styles
+  - e.g. remove default margins
+- Fix browser bugs and inconsistencies
+  - e.g. remove rounded corners on buttons in iOS
+- Apply custom global styles
+  - e.g. set `box-sizing: border-box;` on all elements
+
+Our CSS reset focuses on removing unwanted default styles. There aren’t many browser inconsistencies to worry about these days, and we prefer to let developers add their own global styles rather than include any opinionated styles in the reset (i.e. unlike [normalize.css](https://nicolasgallagher.com/about-normalize-css/) which aims to improve upon the user agent styles rather than reset them).
+
+## Usage
+
+Download [`frontline-css-reset.min.css`](dist/frontline-css-reset.min.css) and include it in your project before any other custom styles.
+
+It can also be downloaded via npm: `$ npm install frontline-css-reset`
+
+## Browser Support
+
+This reset uses [`:where()`](https://developer.mozilla.org/en-US/docs/Web/CSS/:where) as much as possible to reduce specificity to zero, making it easier for devs to override any of the styles later. It’s fully supported in all browser that support `:where()` (see https://caniuse.com/mdn-css_selectors_where).
+
+If your project requires deeper browser support try using version [6.0.1](https://github.com/Threespot/frontline-css-reset/releases/tag/v6.0.1), which doesn’t use `:where()`.
 
 ## License
 
