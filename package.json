@@ -6,7 +6,7 @@
   "main": "dist/frontline-css-reset.min.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Threespot/frontline-css-reset.git"
+    "url": "git+https://github.com/Threespot/frontline-css-reset.git"
   },
   "author": "Threespot <hello@threespot.com> (https://threespot.com)",
   "homepage": "https://github.com/Threespot/frontline-css-reset",
