@@ -1,5 +1,5 @@
 # Frontline CSS Reset
-[![npm version](https://badge.fury.io/js/frontline-css-reset.svg)](https://badge.fury.io/js/frontline-css-reset) ![gzip file size](https://badge-size.herokuapp.com/Threespot/frontline-css-reset/master/dist/frontline-css-reset.min.css?compression=gzip)
+![npm version](https://img.shields.io/npm/v/frontline-css-reset) ![gzip size](https://img.badgesize.io/Threespot/frontline-css-reset/master/dist/frontline-css-reset.min.css.svg?compression=gzip)
 
 ## Background
 
