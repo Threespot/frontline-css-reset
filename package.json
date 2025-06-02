@@ -1,7 +1,7 @@
 {
   "name": "frontline-css-reset",
   "description": "Threespot’s CSS reset",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "type": "module",
   "main": "dist/frontline-css-reset.min.css",
   "repository": {
