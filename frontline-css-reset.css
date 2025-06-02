@@ -218,7 +218,8 @@ select,
 [type="reset"],
 [type="submit"],
 [aria-controls],
-::file-selector-button {
+::file-selector-button,
+summary {
   cursor: pointer;
 }
 
