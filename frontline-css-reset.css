@@ -37,7 +37,7 @@ html {
 /* Reset heading weight, allow long words to break */
 :where(h1, h2, h3, h4, h5, h6) {
   font-weight: normal;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 /*
@@ -45,7 +45,7 @@ html {
   https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 */
 :where(p) {
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   text-wrap: pretty;
 }
 
@@ -118,7 +118,7 @@ html {
 /* Allow preformatted text to wrap by default */
 :where(pre) {
   white-space: pre-wrap;
-  word-break: break-word;
+  word-break: anywhere;
 }
 
 /*
