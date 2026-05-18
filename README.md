@@ -1,5 +1,5 @@
 # Frontline CSS Reset
-![npm version](https://img.shields.io/npm/v/frontline-css-reset) ![gzip size](https://img.badgesize.io/Threespot/frontline-css-reset/master/dist/frontline-css-reset.min.css.svg?compression=gzip)
+![npm version](https://img.shields.io/npm/v/frontline-css-reset)
 
 ## Background
 
@@ -25,7 +25,7 @@ Our CSS reset focuses on removing unwanted default styles. There aren’t many b
 
 ## Usage
 
-Download [`frontline-css-reset.min.css`](dist/frontline-css-reset.min.css) and include it in your project before any other custom styles.
+Download [`frontline-css-reset.css`](frontline-css-reset.css) and include it in your project before any other custom styles.
 
 It can also be downloaded via npm: `$ npm install frontline-css-reset`
 

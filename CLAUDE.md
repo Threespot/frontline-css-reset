@@ -12,15 +12,13 @@ Never introduce Unicode smart quotes or curly quotes in any code file (PHP, JS, 
 
 ## Project overview
 
-Frontline CSS Reset is a single-file CSS reset published to npm as `frontline-css-reset`. The hand-authored source is `frontline-css-reset.css`; the published artifact is `dist/frontline-css-reset.min.css`, minified by `csso-cli`. There is no preprocessor, no test suite, and no linter — the whole library is one CSS file plus a build step.
+Frontline CSS Reset is a single-file CSS reset published to npm as `frontline-css-reset`. The hand-authored source `frontline-css-reset.css` is also the published artifact — there is no build step, no preprocessor, no test suite, and no linter.
 
 Toolchain is pinned in `.tool-versions` (Node 22.15.0, Yarn 1.22.22). The project uses Yarn Classic, not npm — a `package-lock.json` in the working tree is incidental and not the source of truth.
 
 ## Commands
 
-- `yarn build` — minify `frontline-css-reset.css` → `dist/frontline-css-reset.min.css` (preserves the leading `/*!` banner comment).
 - `yarn patch` / `yarn minor` / `yarn major` — interactive release prompts. Each confirms (y/n), then runs `npm version <bump>`, which triggers:
-  - `version` hook: `yarn build && git add .` (rebuilds dist and stages it into the version commit)
   - `postversion` hook: `git push && git push --tags`
   Do not invoke these unless the user explicitly asks to cut a release — they push to the remote and to npm tags.
 
@@ -32,5 +30,3 @@ The reset is structured around two deliberate specificity tiers:
 2. **Non-`:where()` rules** — used intentionally where higher specificity is needed. The header comment of each such block usually explains why. Examples: the universal selector `*` (margin/padding/box-sizing inherit), `*:before / *:after` (must work pre-`:where()` to avoid breaking old-browser layout), the `cursor:` block (intended to be hard to accidentally override, and `::file-selector-button` needs ≥10 specificity to beat UA styles), `::placeholder`, `::file-selector-button`, `[aria-busy]`/`[disabled]`/`[readonly]` cursor states, and `[hidden] { display: none !important }`.
 
 When editing, preserve this tiering: default to `:where()` for element resets; only drop it (or add `!important`) when there is a concrete reason, and document it inline like the existing comments do. Several rules also include numbered footnote-style annotations (`/* 1 */`) tied to comment blocks above — keep that convention when adding similar rules.
-
-The `/*! ... */` banner on line 1 is preserved through minification via the `--comments first-exclamation` flag — keep that exact comment syntax if editing the header.
