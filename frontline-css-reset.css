@@ -146,6 +146,14 @@ html {
 }
 
 /*
+  Prevent iOS from zooming in on focus when form fields font-size < 16px
+  http://www.456bereastreet.com/archive/201212/ios_webkit_browsers_and_auto-zooming_form_controls/
+*/
+:where(input, select, textarea) {
+  font-size: max(1em, 16px);
+}
+
+/*
   Standardize button styles
   https://css-tricks.com/system-things/
   https://www.smashingmagazine.com/2022/03/windows-high-contrast-colors-mode-css-custom-properties/#forced-colors-mode-keywords
