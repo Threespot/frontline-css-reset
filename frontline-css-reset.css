@@ -251,6 +251,6 @@ summary {
 }
 
 /* Keep element hidden even if the “display” property is set to something else */
-[hidden] {
+[hidden]:where(:not([hidden='until-found'])) {
   display: none !important;
 }
